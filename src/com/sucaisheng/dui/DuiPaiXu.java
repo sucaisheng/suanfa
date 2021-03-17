@@ -1,6 +1,9 @@
 package com.sucaisheng.dui;
 
-
+/**
+ *
+ * 堆排序
+ */
 public class DuiPaiXu {
     public static void main(String[] args){
         int index = 0;
