@@ -1,5 +1,7 @@
 package com.sucaisheng.graph;
 
+import java.util.List;
+
 /**
  * 将给定的图转换成自己熟悉的图结构，并且完成相关算法测试
  */
@@ -7,14 +9,21 @@ public class Test {
     public static void main(String[] args){
         //给定图结构
         int[][] v = {{2,1,2},{2,1,3},{3,2,1},{5,2,4},{1,3,1},{4,3,5},{3,3,4},{2,5,4}};
+        int[][] tuoPu = {{1,1,2},{1,1,3},{1,2,4},{1,3,4},{1,3,5},{1,5,4},};
         //将给定图转换成自己定义的图结构
-        Graph graph = creatGraph(v);
+        Graph graph = creatGraph(tuoPu);
 
         //测试宽度优先算法
-        Wfs.wfs(graph.nodes.get(1));
+        //Wfs.wfs(graph.nodes.get(1));
 
         //测试深度优先算法
-        Dfs.dfs(graph.nodes.get(1));
+        //Dfs.dfs(graph.nodes.get(1));
+
+        //测试图的拓扑排序
+        List<Node> nodes = TuoPu.tuoPuPaiXu(graph);
+        for (Node node : nodes){
+            System.out.println(node.value);
+        }
     }
 
     /**
